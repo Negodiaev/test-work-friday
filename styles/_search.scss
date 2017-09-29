@@ -1,0 +1,61 @@
+.catalogSearch {
+  .form {
+    margin-bottom: rem-calc(60);
+    border-top: 2px solid $light-gray;
+    border-bottom: 2px solid $light-gray;
+    input,
+    select,
+    button {
+      margin: 0;
+    }
+    button {
+      padding: 1rem;
+      color: $secondary-color;
+      background-color: transparent;
+    }
+  }
+  .formItem {
+    position: relative;
+    margin-bottom: rem-calc(20);
+    &.search {
+      position: relative;
+      input {
+        padding-left: 0;
+      }
+    }
+    &:last-child {
+      button[type=reset] {
+        padding-right: 0;
+      }
+    }
+    select,
+    .colors {
+      padding: 0;
+    }
+    select {
+      height: auto;
+    }
+    .button {
+      &.reset {
+        position: absolute;
+        top: 50%; right: 0;
+        padding: rem-calc(10);
+        font-size: 2rem;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.itemsSorting {
+  margin-bottom: rem-calc(50);
+  color: $secondary-color;
+  legend {
+    margin-right: 1rem;
+    line-height: unitless-calc(25, 14);
+  }
+}
+
+.catalogItemsNumber {
+  color: $body-font-color;
+}

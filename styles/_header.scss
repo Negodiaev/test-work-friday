@@ -1,0 +1,67 @@
+.header {
+  padding: 0 0 rem-calc(30);
+}
+
+.mainMenu {
+  padding: rem-calc(30) 0;
+  background-color: $light-gray;
+}
+
+.headerMenu {
+  flex-direction: column;
+  color: $secondary-color;
+  &.simple {
+    li {
+      & + li {
+        margin: .5rem 0 0 0;
+      }
+    }
+  }
+  &.categories {
+    margin-bottom: rem-calc(20);
+    padding: rem-calc(5) 0; 
+  }
+  svg {
+    margin-right: rem-calc(5);
+    font-size: 1.2rem;
+    vertical-align: middle;
+    fill: $secondary-color;
+  }
+  .innerText {
+    vertical-align: middle;
+  }
+  select {
+    padding: 0;
+    height: auto;
+  }
+}
+
+.logoContainer {
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin-bottom: rem-calc(20);
+  font-size: rem-calc(20);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .7em;
+  &:hover {
+    color: $anchor-color;
+  }
+}
+
+.iconMenu {
+  justify-content: center;
+  &.simple {
+    li {
+      & + li {
+        margin-left: rem-calc(30);
+      }
+    }
+  }
+  svg {
+    font-size: 1.2rem;
+  }
+}

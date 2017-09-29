@@ -1,0 +1,154 @@
+@include breakpoint(small only) {
+  .catalogItemsNumber {
+    margin: .5rem 0;
+  }
+
+}
+
+@include breakpoint(medium) {
+  .logoContainer {
+    text-align: left;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+  .iconMenu {
+    justify-content: flex-end;
+    &.simple {
+      li {
+        & + li {
+          margin-left: rem-calc(62);
+        }
+      }
+    }
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+  .catalogSearch {
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .formItem {
+      margin-bottom: 0;
+      width: 50%;
+      select {
+        padding: 1rem 0;
+      }
+      .colors {
+        padding: 1rem 0 0 0;
+      }
+    }
+  }
+  .itemsSorting {
+    legend {
+      float: left;
+    }
+  }
+  .catalogItemsNumber {
+    text-align: right;
+  }
+
+}
+
+@include breakpoint(large only) {
+  .header {
+    padding-top: 0;
+  }
+  .catalogSearch {
+    .formItem {
+      .button {
+        &.reset {
+          padding: 0;
+        }
+      }
+    }
+  }
+  
+}
+
+@include breakpoint(large) {
+  .headerMenu {
+    flex-direction: row;
+    &.simple {
+      li {
+        & + li {
+          margin: 0 0 0 rem-calc(25);
+        }
+      }
+    }
+  }
+  .catalogSearch {
+    .form {
+      flex-wrap: nowrap;
+    }
+    .formItem {
+      position: relative;
+      flex: 1 1 auto;
+      width: auto;
+      margin-bottom: 0;
+      & + .formItem {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%; left: 0;
+          width: 2px;
+          height: rem-calc(30);
+          background-color: $light-gray;
+          transform: translateY(-50%);
+        }
+      }
+      select {
+        padding: 1rem 1.5rem 1rem 1rem;
+      }
+      .colors {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+  .product {
+    padding: 2.5rem;
+  }
+  
+}
+
+@include breakpoint(xlarge) {
+  .header {
+    padding-top: rem-calc(30);
+  }
+  .mainMenu {
+    background-color: transparent;
+  }
+  .headerMenu {
+    &.categories {
+      margin-bottom: 0;
+    }
+    &.contacts {
+      float: right;
+    }
+  }
+  .catalogItemsNumber {
+    text-align: center;
+  }
+  .itemsShow {
+    float: right;
+  }
+  .product {
+    padding: rem-calc(56);
+  }
+  
+}
+
+@include breakpoint(xxlarge) {
+  .headerMenu {
+    &.simple {
+      li {
+        & + li {
+          margin-left: rem-calc(44);
+        }
+      }
+    }
+  }
+}

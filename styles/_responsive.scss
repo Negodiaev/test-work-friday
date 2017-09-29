@@ -2,7 +2,6 @@
   .catalogItemsNumber {
     margin: .5rem 0;
   }
-
 }
 
 @include breakpoint(medium) {
@@ -46,10 +45,16 @@
       float: left;
     }
   }
-  .catalogItemsNumber {
-    text-align: right;
+  .customCheckbox {
+    &.sortingType {
+      &:not(:checked),
+      &:checked {
+        & + label {
+          margin-right: 1.5rem;
+        }
+      }
+    }
   }
-
 }
 
 @include breakpoint(large only) {
@@ -65,7 +70,6 @@
       }
     }
   }
-  
 }
 
 @include breakpoint(large) {
@@ -111,7 +115,6 @@
   .product {
     padding: 2.5rem;
   }
-  
 }
 
 @include breakpoint(xlarge) {
@@ -138,7 +141,6 @@
   .product {
     padding: rem-calc(56);
   }
-  
 }
 
 @include breakpoint(xxlarge) {
